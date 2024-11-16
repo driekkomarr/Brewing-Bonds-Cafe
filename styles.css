@@ -1,0 +1,303 @@
+
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+    color: #333;
+}
+
+
+header {
+    background-color: #333;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #fff;
+    margin: 0;
+}
+
+.logo p {
+    font-size: 14px;
+    color: #ddd;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #fff;
+    background-color: #553322;
+}
+
+
+#home {
+    padding: 120px 20px 60px;
+    background-color: brown;
+    color: #fff;
+    text-align: center;
+}
+
+#home h2 {
+    font-size: 36px;
+    color: #f4d5ff;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #ddd;
+}
+
+#homeimg {
+    max-width: 300px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+#about {
+    height: 100%;
+    padding: 80px 20px;
+    background-color: brown;
+    color: #333;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-image,
+.about-text {
+    flex: 1;
+    min-width: 300px; 
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+#menu {
+    padding: 80px 20px;
+    background-color: brown;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.menu-item {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.menu-item h3 {
+    color: #774936;
+}
+
+.menu-item p {
+    color: #555;
+}
+
+.buy-now {
+    background-color: #774936;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-now:hover {
+    background-color: #553322;
+}
+
+
+#contact {
+    padding: 80px 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input,
+textarea,
+button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #774936;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #553322;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav {
+        justify-content: center; 
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .hero-image img {
+        margin-top: 20px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    #home h2 {
+        font-size: 28px;
+    }
+
+    #home p {
+        font-size: 16px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    input,
+    textarea,
+    button {
+        padding: 12px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-image img {
+        width: 250px;
+        margin-bottom: 20px;
+    }
+
+    .about-text {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    #about {
+        padding: 0 5%;
+    }
+}
+
+#colored {
+    color: white;
+}
+
+#colored1 {
+    color: white;
+}
